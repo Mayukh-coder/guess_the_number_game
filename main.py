@@ -3,14 +3,16 @@ import time
 print('''
 ######## Welcome to the "Guess the number" Game ########
     This is a game where the computer guesses a word and you have to guess the number.
+''')
+while(True):
+    print('''
     Please choose an option
         1. Enter the game (Enter '1')
         2. Close the game (Enter '2')
-        3. Check the highscore(the least guesses) (Enter '3')
+        3. Check the highscore (the least guesses) (Enter '3')
         4. Clear previous HighScore (Enter '4')
-''')
-while(True):
-    startOption=input("What is you option? ")
+    ''')
+    startOption=input("What is your option? ")
     if startOption=='2':
         exit()
     elif startOption=='1':
