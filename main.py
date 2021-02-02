@@ -7,6 +7,7 @@ print('''
         1. Enter the game (Enter '1')
         2. Close the game (Enter '2')
         3. Check the highscore(the least guesses) (Enter '3')
+        4. Clear previous HighScore (Enter '4')
 ''')
 while(True):
     startOption=input("What is you option? ")
@@ -14,6 +15,12 @@ while(True):
         exit()
     elif startOption=='1':
         break
+    elif startOption=='4':
+        print("Clearing prevoius Highscore ...")
+        time.sleep(2)
+        with open("highscore.txt",'w') as f:
+            f.write("0")
+        print("High Score has been cleared")
     elif startOption=='3':
         with open("highscore.txt") as f:
             highscore=int(f.read())
