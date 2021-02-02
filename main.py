@@ -15,12 +15,18 @@ while(True):
     else:
         print("Please eneter a valid option")
 
+guesses=1
 randomInteger=random.randint(1,101)
-print("The computer has guessed a number. Try to guess the number in minimum guesses")
+print("I have picked a number between 1 to 100. Try to guess the number in minimum guesses")
 while(True):
     userEnteredNumber=int(input("Enter you guess: "))
     if userEnteredNumber==randomInteger :
-        print("Yaayy!! You won!")
+        print(f"Yaayy!! You won! You have won the game in {guesses} guesses. Congratulations.")
         exit()
     else:
-        print("Oops This is not the number. Try again") 
+        print("Oops!! This is not the number.")
+        if userEnteredNumber > randomInteger:
+            print("The number is higher than what I picked. Try a lower value")
+        else:
+            print("The number is lower than what I picked. Try a higher value")
+    guesses +=1
