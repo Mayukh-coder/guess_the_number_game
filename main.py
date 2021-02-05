@@ -35,7 +35,7 @@ def game():
             print("Please eneter a valid option")
 
     guesses=1
-    randomInteger=random.randint(1,101)
+    randomInteger=random.randint(1,100)
     print("I have picked a number between 1 to 100. Try to guess the number in minimum guesses")
     while(True):
         userEnteredNumber=int(input("Enter you guess: "))
